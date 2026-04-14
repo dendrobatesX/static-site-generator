@@ -71,7 +71,7 @@ def main():
         basepath = "/"
     nowy=TextNode("this", TextType.IMAGE, "https://www.google.com")
     print(nowy.__repr__())
-    copy_directory("static", "doc")
+    copy_directory("static", "docs")
     generate_pages_recursive("content", "template.html", "docs", basepath)
 
 main()    
