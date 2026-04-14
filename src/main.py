@@ -6,15 +6,12 @@ import sys
 
 
 
-def copy_directory(src, dst):
-    # Step 1: delete destination if it exists
+def copy_directory(src, dst):   
     if os.path.exists(dst):
         shutil.rmtree(dst)
 
-    # Step 2: recreate destination root
     os.mkdir(dst)
 
-    # Step 3: recursively copy
     _copy_recursive(src, dst)
 
 
@@ -74,7 +71,7 @@ def main():
         basepath = "/"
     nowy=TextNode("this", TextType.IMAGE, "https://www.google.com")
     print(nowy.__repr__())
-    copy_directory("static", "public")
+    copy_directory("static", "doc")
     generate_pages_recursive("content", "template.html", "docs", basepath)
 
 main()    
